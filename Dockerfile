@@ -31,7 +31,7 @@ RUN yum -y install openssh-server && \
 # Install wget tar screen htop passwd nano packages
 RUN yum -y install wget tar screen htop passwd nano
 
-# Download and install lnmp1.2.
+# Download and install lnmp1.1
 RUN wget -c https://api.sinas3.com/v1/SAE_lnmp/soft/lnmp1.1-full.tar.gz --no-check-certificate && tar zxf lnmp1.1-full.tar.gz -C root && rm -rf lnmp1.1-full.tar.gz
 
 ADD centos.sh /root/lnmp1.1-full/centos.sh
