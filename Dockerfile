@@ -1,10 +1,10 @@
 #
 # MAINTAINER        Max
-# DOCKER-VERSION    1.1.10
+# DOCKER-VERSION    1.10
 # CENTOS-VERSION    6.7
-# LNMP-VERSION      1.2 www.lnmp.org
+# LNMP-VERSION      1.1 www.lnmp.org
 # VERSION           1.0
-# DATE              02/08/2016
+# DATE              02/09/2016
 # Dockerfile for building LNMP image base on Centos6.7
 #
 
@@ -32,11 +32,11 @@ RUN yum -y install openssh-server && \
 RUN yum -y install wget tar screen htop passwd nano
 
 # Download and install lnmp1.2.
-RUN wget -c https://api.sinas3.com/v1/SAE_lnmp/soft/lnmp1.2-full.tar.gz --no-check-certificate && tar zxf lnmp1.2-full.tar.gz -C root && rm -rf lnmp1.2-full.tar.gz
+RUN wget -c https://api.sinas3.com/v1/SAE_lnmp/soft/lnmp1.1-full.tar.gz --no-check-certificate && tar zxf lnmp1.1-full.tar.gz -C root && rm -rf lnmp1.1-full.tar.gz
 
-ADD centos.sh /root/lnmp1.2-full/centos.sh
-RUN chmod +x /root/lnmp1.2-full/centos.sh
-RUN cd /root/lnmp1.2-full && \   
+ADD centos.sh /root/lnmp1.1-full/centos.sh
+RUN chmod +x /root/lnmp1.1-full/centos.sh
+RUN cd /root/lnmp1.1-full && \   
     ./centos.sh
 
 ADD set_root_pw.sh /set_root_pw.sh
