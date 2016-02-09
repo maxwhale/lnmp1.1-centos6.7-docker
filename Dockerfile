@@ -38,8 +38,6 @@ ADD centos.sh /root/lnmp1.1-full/centos.sh
 RUN chmod +x /root/lnmp1.1-full/centos.sh
 RUN cd /root/lnmp1.1-full && \   
     ./centos.sh
-    
-RUN /root/lnmp start
 
 ADD set_root_pw.sh /set_root_pw.sh
 ADD run.sh /run.sh
@@ -52,3 +50,4 @@ VOLUME ["/home"]
 
 EXPOSE 80 21 22 3306 6379 11211
 CMD ["/run.sh"]
+CMD ["/root/lnmp start"]
