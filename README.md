@@ -6,3 +6,5 @@ Root password:LNMP123
 Mysql root password: LNMP123
 
 Mysql verison: 5.5
+
+PHP verison: 5.3.28
