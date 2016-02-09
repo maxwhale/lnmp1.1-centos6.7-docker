@@ -23,5 +23,4 @@ if [ ! -f /.root_pw_set ]; then
 	/set_root_pw.sh
 fi
 exec /usr/sbin/sshd -D
-cd /root/
-lnmp start
+/root/lnmp start
