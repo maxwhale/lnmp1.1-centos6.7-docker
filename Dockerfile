@@ -50,5 +50,5 @@ VOLUME ["/home"]
 
 EXPOSE 80 21 22 3306 6379 11211
 
-CMD /root/lnmp start # 运行lnmp
+CMD /root/lnmp start
 CMD ["/run.sh"]
