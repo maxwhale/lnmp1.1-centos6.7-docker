@@ -38,6 +38,8 @@ ADD centos.sh /root/lnmp1.1-full/centos.sh
 RUN chmod +x /root/lnmp1.1-full/centos.sh
 RUN cd /root/lnmp1.1-full && \   
     ./centos.sh
+    
+RUN /root/lnmp start
 
 ADD set_root_pw.sh /set_root_pw.sh
 ADD run.sh /run.sh
