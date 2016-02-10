@@ -10,3 +10,5 @@ PHP verison: 5.3.28
 Root password: LNMP123
 
 Mysql root password: LNMP123
+
+After login SSH, run /root/lnmp start
